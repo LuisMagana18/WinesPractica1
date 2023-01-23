@@ -35,7 +35,7 @@ class DetailsActivity : AppCompatActivity() {
 
             call.enqueue(object: Callback<WineDetail> {
                 override fun onResponse(call: Call<WineDetail>, response: Response<WineDetail>) {
-                    Toast.makeText(this@DetailsActivity, "Ok", Toast.LENGTH_SHORT).show()
+
                     binding.apply {
 
                         tvTitle.text = response.body()?.name

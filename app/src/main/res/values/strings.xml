@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">WinesPractica1</string>
+    <string name="app_name">Wine App</string>
+    <string name="app_name_version">Wine App v1.1</string>
+    <string name="autor_name">Luis Angel Magaña</string>
 </resources>
