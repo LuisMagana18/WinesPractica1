@@ -72,6 +72,7 @@
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     tools:text="Tipo" />
+
                 <TextView
                     android:id="@+id/tvAge"
                     android:layout_width="match_parent"
@@ -84,6 +85,7 @@
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     tools:text="Año" />
+
                 <TextView
                     android:id="@+id/tvColor"
                     android:layout_width="match_parent"
@@ -96,6 +98,7 @@
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     tools:text="Color" />
+
                 <TextView
                     android:id="@+id/tvRegion"
                     android:layout_width="match_parent"
@@ -108,6 +111,7 @@
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     tools:text="Region" />
+
                 <TextView
                     android:id="@+id/tvPairing"
                     android:layout_width="match_parent"
@@ -120,6 +124,48 @@
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     tools:text="Maridaje" />
+                <TextView
+                    android:id="@+id/tvLat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:text="Latitud" />
+                <TextView
+                    android:id="@+id/tvLong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:text="Longitud" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="20sp"/>
+
+                <Button
+                    android:id="@+id/ibtnUbi"
+                    android:layout_width="match_parent"
+                    android:text="@string/msg_ubi"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/colorAge"
+                    />
             </LinearLayout>
         </ScrollView>
 

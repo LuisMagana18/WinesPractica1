@@ -1,12 +1,21 @@
 package com.mgoc.winespractica1.view.activities
 
+import android.Manifest
+import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.maps.GoogleMap
 import com.mgoc.winespractica1.databinding.ActivityMainBinding
 import com.mgoc.winespractica1.model.Wine
 import com.mgoc.winespractica1.model.WinesApi
@@ -22,6 +31,7 @@ import retrofit2.Response
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +75,7 @@ class MainActivity : AppCompatActivity() {
     fun selectedWine(wine: Wine){
         val parametros = Bundle().apply {
             putString("id", wine.id)
+
         }
 
         val intent = Intent(this, DetailsActivity::class.java).apply {
@@ -74,4 +85,5 @@ class MainActivity : AppCompatActivity() {
 
         startActivity(intent)
     }
+
 }

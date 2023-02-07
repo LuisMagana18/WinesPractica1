@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -9,7 +10,7 @@ android {
     defaultConfig {
         applicationId "com.mgoc.winespractica1"
         minSdk 23
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -36,6 +37,7 @@ android {
 
 dependencies {
 
+
     def retrofitVersion = '2.9.0'
     def glideVersion = '4.14.2'
 
@@ -48,8 +50,14 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.github.bumptech.glide:glide:$glideVersion"
 
+    //Implementacion Firebase
+    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
+
     //https://github.com/vinc3m1/RoundedImageView
     implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //Para la localizacion
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

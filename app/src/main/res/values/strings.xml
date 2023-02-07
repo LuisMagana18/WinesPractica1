@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">Wine App</string>
+    <string name="app_credit">© Wine App</string>
     <string name="app_name_version">Wine App v1.1</string>
     <string name="autor_name">Luis Angel Magaña</string>
+    <string name="slogan">El vino agrada y el agua enfada</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="olvido">¿Olvidó su contraseña? Restablecer aquí</string>
+
+    <!-- Mensajes de error-->
+    <string name="no_correo">Se requiere el correo</string>
+    <string name="no_psw">Se requiere una contraseña o la contraseña no tiene por lo menos 6 caracteres</string>
+    <string name="error_datos">No fue posible recuperar los datos</string>
+    <string name="msg_ubi">¿Donde conseguirlo? Click Aquí</string>
+
 </resources>

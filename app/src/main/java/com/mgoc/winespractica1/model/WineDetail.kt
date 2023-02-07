@@ -25,6 +25,12 @@ data class WineDetail(
     var region: String? = null,
 
     @SerializedName("pairing")
-    var pairing: String? = null
+    var pairing: String? = null,
+
+    @SerializedName("lati")
+    var lati: Double? = null,
+
+    @SerializedName("longi")
+    var longi: Double? = null
 
 )

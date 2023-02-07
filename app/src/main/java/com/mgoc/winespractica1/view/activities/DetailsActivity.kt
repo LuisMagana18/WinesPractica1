@@ -1,11 +1,14 @@
 package com.mgoc.winespractica1.view.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.bumptech.glide.Glide
+import com.mgoc.winespractica1.R
 import com.mgoc.winespractica1.databinding.ActivityDetailsBinding
+import com.mgoc.winespractica1.model.Wine
 import com.mgoc.winespractica1.model.WineDetail
 import com.mgoc.winespractica1.model.WinesApi
 import com.mgoc.winespractica1.util.Constants
@@ -56,18 +59,43 @@ class DetailsActivity : AppCompatActivity() {
 
                         tvPairing.text = response.body()?.pairing
 
+                        tvLat.text = response.body()?.lati.toString()
+
+                        tvLong.text = response.body()?.longi.toString()
+
+
+                        ibtnUbi.setOnClickListener {
+                            val intent = Intent(this@DetailsActivity, MapActivity::class.java)
+                            intent.putExtra("KEY_LAT", response.body()?.lati)
+                            intent.putExtra("KEY_LONG", response.body()?.longi)
+                            startActivity(intent)
+                            finish()
+                        }
+
+
+
                         pbConexion.visibility = View.INVISIBLE
+
                     }
 
 
                 }
 
                 override fun onFailure(call: Call<WineDetail>, t: Throwable) {
-                    Toast.makeText(this@DetailsActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@DetailsActivity, this@DetailsActivity.getString(R.string.error_datos), Toast.LENGTH_SHORT).show()
                     binding.pbConexion.visibility = View.INVISIBLE
                 }
 
             })
         }
+
+        binding.ibtnUbi.setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            startActivity(intent)
+            //finish()
+        }
+
+
     }
+
 }
