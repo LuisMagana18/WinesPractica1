@@ -8,6 +8,7 @@ El objetivo de la aplicación es mostrar una lista de vinos que contengan sus ca
 
 ## Logo de la app
 El logo de la aplicación consiste en una Botella junto a una copa de vino que representa la aplicación, ya que la app inicia con un splash del Logo.
+
 ![wine_icon](https://github.com/LuisMagana18/WinesPractica1/assets/47648516/e69df5f9-105d-4db7-8846-ec0bf6936717)
 
 
